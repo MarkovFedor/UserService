@@ -3,11 +3,11 @@ package com.mitrasoft.userservice.entities;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.parameters.P;
 
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.Set;
 
+@Entity
+@Table(name="role")
 public class Role implements GrantedAuthority {
     @Id
     private Long id;
