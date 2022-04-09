@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.Set;
 
 @Entity
+@Table(name = "users")
 @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User implements UserDetails {
     @Id
