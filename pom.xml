@@ -36,7 +36,11 @@
             <artifactId>flyway-core</artifactId>
             <version>8.5.7</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
+            <version>2.3.3.RELEASE</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -45,8 +49,8 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>7.0.0</version>
                 <configuration>
-                    <url>jdbc:postgresql://localhost:5432/mitrasoft</url>
-                    <user>postgres</user>
+                    <url>jdbc:postgresql://localhost:5432/</url>
+                    <user>username</user>
                     <password>password</password>
                 </configuration>
             </plugin>
