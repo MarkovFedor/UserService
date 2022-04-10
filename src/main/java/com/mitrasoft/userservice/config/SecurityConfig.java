@@ -21,10 +21,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.httpBasic()
                 .and()
                 .authorizeRequests()
-                .antMatchers("/admin/**").hasAuthority("ADMIN")
-                .antMatchers("/**").hasAuthority("USER")
+                .antMatchers("/api/admin/**").hasAuthority("ADMIN")
+                .antMatchers("/api/**").hasAuthority("USER")
                 .and()
-                .formLogin();
+                .formLogin()
+                        .and()
+                                .oauth2Login();
         http.csrf().disable();
     }
 }
